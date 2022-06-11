@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AniOlusturma"
+    android:background="#9D9D9D">
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="40dp"
+        android:clipToPadding="false"
+        android:paddingBottom="10dp"
+        app:layout_anchor="@+id/scrollView2"
+        app:layout_anchorGravity="center">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutKaydetAni"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+            <ImageView
+                android:id="@+id/imageGeri"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_geri"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
+
+            <ImageView
+                android:id="@+id/imageKaydet"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="@string/app_name"
+                android:padding="4dp"
+                android:src="@drawable/ic_done"
+                app:layout_constraintBottom_toBottomOf="@id/imageGeri"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/imageGeri"
+                app:tint="@color/black" />
+
+            <EditText
+                android:id="@+id/inputNotBaslik"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="12dp"
+                android:hint="@string/ani_baslik"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/imageGeri"
+
+                />
+
+            <TextView
+                android:id="@+id/textTarih"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@id/inputNotBaslik"
+                app:layout_constraintStart_toStartOf="@id/inputNotBaslik"
+                app:layout_constraintTop_toBottomOf="@id/inputNotBaslik"
+
+                />
+
+            <EditText
+                android:id="@+id/inputMood"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="200dp"
+                android:background="@null"
+                android:hint="@string/modunuz"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingTop="8sp"
+                android:paddingBottom="8sp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageMood"
+                app:layout_constraintTop_toBottomOf="@id/textTarih" />
+
+            <ImageView
+                android:id="@+id/imageMood"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:background="@null"
+                android:src="@drawable/ic_mood"
+                app:layout_constraintBottom_toBottomOf="@id/inputMood"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/inputMood"
+
+                />
+
+            <ImageView
+                android:id="@+id/imageAni"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="12dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_name"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/inputMood" />
+
+
+            <LinearLayout
+                android:id="@+id/layoutSifre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/imageAni"
+                android:visibility="gone">
+                
+                <TextView
+                    android:id="@+id/textSifreAni"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/inputAni"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="15dp"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="@string/ani_giriniz"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:minHeight="100sp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutSifre"
+
+
+                />
+
+            <ImageView
+                android:id="@+id/deleteAni"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_delete"
+                app:layout_constraintRight_toLeftOf="@id/imageKaydet"
+                app:layout_constraintTop_toTopOf="@id/imageKaydet"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/pdfAni"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_pdf"
+                app:layout_constraintRight_toLeftOf="@id/deleteAni"
+                app:layout_constraintTop_toTopOf="@id/deleteAni"
+                android:visibility="gone"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layoutBottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_gravity="bottom"
+        android:background="#353535"
+        android:padding="20dp">
+
+
+        <ImageView
+            android:id="@+id/imageMedyaEkle"
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_media"
+            app:layout_anchor="@+id/layoutBottomMenu"
+            app:layout_anchorGravity="center"
+            app:tint="#9D9D9D" />
+
+        <ImageView
+            android:id="@+id/imageKonumEkle"
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_location"
+            app:tint="#9D9D9D" />
+
+        <ImageView
+            android:id="@+id/imageŞifreEkle"
+            android:layout_width="116dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#353535"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_lock"
+            app:tint="#9D9D9D" />
+
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

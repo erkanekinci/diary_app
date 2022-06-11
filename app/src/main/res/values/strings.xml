@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">diary app</string>
+    <string name="notlarim">Notlarım</string>
+    <string name="not_arama">Not Arama</string>
+    <string name="ani_baslik">Anı Başlığı</string>
+    <string name="modunuz">Modunuz</string>
+    <string name="ani_giriniz">Anı giriniz...</string>
+    <string name="anilarim">Anılarım</string>
+    <string name="aniarama">Anı arama</string>
+</resources>
